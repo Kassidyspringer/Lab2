@@ -21,6 +21,13 @@ public class SolveMaze {
          * Create a new 10 x 10 maze. Feel free to change these values.
          */
         Maze maze = new Maze(10, 10);
+        while(!maze.isFinished()){
+            maze.turnLeft();
+            while(!maze.canMove()){
+                maze.turnRight();
+            }
+
+        }
 
         /*
          * Pick (0, 0), the bottom left corner, as the starting point.
